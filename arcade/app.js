@@ -7,7 +7,7 @@ console.log('testElem: ', testElem);
 let state = {};
 
 function resetState() {
-    state.board = ['car', 'bus', 'car', 'cat', 'dog', 'cat', 'dog', 'hat', 'hat', 'bus', 'mit', 'mit'];
+    state.board = ['O', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X'];
 }
 
 // ***************** DOM SELECTORS *****************
