@@ -5,13 +5,15 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
     <title>My Tic-Tac-Toe Game</title>
    
 </head>
 
 <body>
-    <h1 id="title">Shane's Tic-Tac-Toe Game</h1>
+    <!-- <h1 id="title">Shane's Tic-Tac-Toe Game</h1> -->
+    <div id="player1Name">Player One Name: </div>
+    <div id="player2Name">Player Two Name: </div>
     <!-- your content here... -->
     <div class="board">
         <div class="cell"><span></span></div>
@@ -26,6 +28,14 @@
     </div>
     <div class="buttons">
         <button type="button">Reset Game</button>
+</div>
+<div>
+    <form>
+        <label for="p1name">Player One name:</label><br>
+        <input type="text" id="p1name" name="p1name"><br>
+        <label for="p2name">Player Two name:</label><br>
+        <input type="text" id="p2name" name="p2name">
+    </form>
 </div>
     
 </body>
