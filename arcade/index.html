@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <!-- <h1 id="title">Shane's Tic-Tac-Toe Game</h1> -->
-    <div id="player1Name">Player One Name: </div>
-    <div id="player2Name">Player Two Name: </div>
+    <h1 id="title">Shane's Tic-Tac-Toe Game</h1>
+    <div id="player1Name">Player One Name:</div>
+    <div id="player2Name">Player Two Name:</div>
     <!-- your content here... -->
     <br><br>
     <div class="board">
@@ -38,16 +38,21 @@
         <input type="text" id="b9" onclick="myfunc_11();myfunc();" readonly>
   
         <br><br><br>
-        
+
     <div class="buttons">
         <button type="button">Reset Game</button>
 </div>
+<br><br><br>
 <div>
     <form>
         <label for="p1name">Player One name:</label><br>
-        <input type="text" id="p1name" name="p1name"><br>
+        <input type="text" id="p1name" name="p1name">
+        <input id="player1Submit" type="submit" value="Submit">
+        
+        <br><br>
         <label for="p2name">Player Two name:</label><br>
         <input type="text" id="p2name" name="p2name">
+        <input id="player2Submit" type="submit" value="Submit">
     </form>
 </div>
     
