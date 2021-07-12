@@ -46,7 +46,7 @@ form {
     display: flex;
     position: absolute;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     bottom: 150px;
 }
 #player1Name {
