@@ -19,7 +19,7 @@
 // testing
 // Function called whenever user tab on any box
 function gameBoard() {
-    let boardElem = document.querySelector('#title');
+    let boardElem = document.querySelector('#board');
 
     
     // get user names
@@ -30,12 +30,20 @@ function gameBoard() {
         document.getElementById("myPlayer2Name").innerHTML = player2Name;
         console.log(player1Name);
         console.log(player2Name);
-        return player1Name;
+    }
+
+    // add event listener
+   
+
+    const renderScore = () => {
+        scoreElem.innerHTML = `
+    <div>${state.players[0]}: ${state.scores[0]}</div>
+    <div>${state.players[1]}: ${state.scores[1]}</div>
+  `;
     }
     getNames();
 
-    // Setting DOM to all boxes or input field
-  
+    // Setting DOM to all boxes displayed
     var b1, b1, b3, b4, b5, b6, b7, b8, b9;
     b1 = document.getElementById("b1").value;
     b2 = document.getElementById("b2").value;
@@ -48,7 +56,7 @@ function gameBoard() {
     b9 = document.getElementById("b9").value;
 
     // Checking if Player X Won! or not and after 
-    // that disabled all the other fields
+    // that disable all other fields
     if ((b1 == 'x' || b1 == 'X') && (b2 == 'x' ||
         b2 == 'X') && (b3 == 'x' || b3 == 'X')) {
         document.getElementById('print')
@@ -148,8 +156,8 @@ function gameBoard() {
     }
 
     // Checking of Player X finsh
-    // Checking for Player 0 starts, Is player 0 Won! or
-    // not and after that disabled all the other fields
+    // Checking of Player 0 start, and if player 0 Won! or
+    // not then disable all other fields
     else if ((b1 == '0' || b1 == '0') && (b2 == '0' ||
         b2 == '0') && (b3 == '0' || b3 == '0')) {
         document.getElementById('print')
@@ -247,8 +255,8 @@ function gameBoard() {
         window.alert('Player 0 Won!');
     }
 
-    // Checking of Player 0 finsh
-    // Here, Checking about Tie
+    // Checking Player 0's game finish
+    // Check for Tie
     else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'
         || b2 == '0') && (b3 == 'X' || b3 == '0') &&
         (b4 == 'X' || b4 == '0') && (b5 == 'X' ||
@@ -261,7 +269,7 @@ function gameBoard() {
     }
     else {
 
-        // Here, Printing Result
+        // Print player's turn 
         if (flag == 1) {
             document.getElementById('print').innerHTML = "Player X Turn";
         }
@@ -286,8 +294,8 @@ function gameReset() {
 }
 
 // check players and add an 'X' or an 'O'
+flag = Math.floor(Math.random() * 2);
 
-flag = 1;
 function myfunc_3() {
     if (flag == 1) {
         document.getElementById("b1").value = "X";

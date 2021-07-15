@@ -29,7 +29,7 @@
       justify-content: center;
     }
   
-    /* 3*3 Grid */
+    /* Tic-tac-toe grid */
     #b1, #b2, #b3, #b4, #b5, 
     #b6, #b7, #b8, #b9 {
       
@@ -50,7 +50,7 @@
      margin-left: 108px;
    }
   
-    /* Player turn space */
+    /* Player's turn */
     #print {
       display: block;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -65,11 +65,3 @@
         text-align: center;
     }
   
-    /* Game Instruction Text */
-    #ins {
-        font-family: Verdana, 
-            Geneva, Tahoma, sans-serif;
-              
-        color: dodgerblue;
-        font-size: 17px;
-    }

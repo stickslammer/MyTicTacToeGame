@@ -12,8 +12,8 @@
 
 <body>
     <h1 id="title">Shane's Tic-Tac-Toe Game</h1>
-    <div id="myPlayer1Name" placeholder="Player One Name: "></div>
-    <div id="myPlayer2Name" placeholder="Player Two Name: "></div>
+    <label id="myPlayer1Name" placeholder="Player One Name: "></label>
+    <label id="myPlayer2Name" placeholder="Player Two Name: "></label>
 
     <br><br>
     <div class="board">
@@ -47,11 +47,11 @@
     <form>
         <label for="p1name">Player One name:</label><br>
         <input type="text" onfocus="this.value=''" id="p1name" name="p1name">
-        <button id="player1Submit" type="submit" value="Submit">Player One</button>
+        <button onclick="document.getElementById('p1name'.innerHTML)">Player One</button>
         <br><br>
         <label for="p2name">Player Two name:</label><br>
         <input type="text" onfocus="this.value=''" id="p2name" name="p2name">
-        <button id="player2Submit" type="submit" value="Submit">Player Two</button>
+        <button onclick="getNames()" id="player2Submit" type="submit" value="Submit">Player Two</button>
 
         <div>
             <label id="print"></label>
