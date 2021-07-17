@@ -5,7 +5,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#myPlayer1Name {
+#myPlayer1Name, #nameTag1 {
   display: inline-flex;
   justify-content: left;
   font-size: 24px;
@@ -14,12 +14,12 @@
   
 }
 
-#myPlayer2Name {
+#myPlayer2Name, #nameTag2 {
   display: inline-flex;
   justify-content: right;
   font-size: 24px;
   color: blueviolet;
-  margin-left: 700px;
+  margin-left: 80px;
 }
 
 .board {

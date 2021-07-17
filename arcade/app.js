@@ -22,8 +22,8 @@
 
  // get user names
 
-// console.log(document);
 
+let boardElem = document.getElementById('board');
 let nameStorage = [];
 function getNames() {
     console.log(document);
@@ -33,11 +33,9 @@ function getNames() {
     nameStorage[1] = user2Name;
     document.getElementById("myPlayer1Name").innerHTML = user1Name;
     document.getElementById("myPlayer2Name").innerHTML = user2Name;
-    // checkForPlayers(nameStorage);
-    let boardElem = document.getElementById('board');
+    boardElem = document.getElementById('board');
     boardElem.addEventListener("click", checkForPlayers(nameStorage));
 }
-
 
 function checkForPlayers(nameStorage) {
     console.log("Checking for players");
@@ -47,13 +45,23 @@ function checkForPlayers(nameStorage) {
     if (nameStorage[1] == '') {
         document.getElementById("myPlayer2Name").innerHTML = "Computer";
     }
+    computerMove();
 }
 
+const computerMove = () => {
+    console.log("Computer Move called");
+    let emptyCells = [];
+    let myRandom = Math.ceil(Math.random() * boardElem.length) - 1;
+        for (let i = 0; i < boardElem.length; i++) {
+        if (boardElem[i].textContent == 'readonly disabled') {
+          emptyCells.push(boardElem[i]);
+        }
+      }
+}
 
 
     function gameBoard() {
         // add event listener
-   
         const renderScore = () => {
             scoreElem.innerHTML = `
     <div>${state.players[0]}: ${state.scores[0]}</div>
@@ -316,7 +324,7 @@ function checkForPlayers(nameStorage) {
     }
 
     // check players and add an 'X' or an 'O'
-flag = Math.floor(Math.random() * 2);
+    flag = Math.floor(Math.random() * 2);
 
     function myfunc_3() {
         if (flag == 1) {
@@ -434,4 +442,3 @@ flag = Math.floor(Math.random() * 2);
             flag = 1;
         }
     }
-
