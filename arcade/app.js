@@ -48,18 +48,6 @@ function checkForPlayers(nameStorage) {
     computerMove();
 }
 
-const computerMove = () => {
-    console.log("Computer Move called");
-    let emptyCells = [];
-    let myRandom = Math.ceil(Math.random() * boardElem.length) - 1;
-        for (let i = 0; i < boardElem.length; i++) {
-        if (boardElem[i].textContent == 'readonly disabled') {
-          emptyCells.push(boardElem[i]);
-        }
-      }
-}
-
-
     function gameBoard() {
         // add event listener
         const renderScore = () => {
@@ -322,6 +310,18 @@ const computerMove = () => {
         document.getElementById("myPlayer1Name").value = '';
         document.getElementById("myPlayer2Name").value = '';
     }
+
+const computerMove = () => {
+    console.log("Computer Move called");
+    let emptyCells = [];
+    //let myRandom = Math.ceil(Math.random() * emptyCells.length) - 1;
+    //boardElem.addEventListener("click", myfunc_3);
+    for (let i = 0; i < boardElem.length; i++) {
+        if (document.getElementById("b1").value= 'X') {
+            console.log("found an empty");
+        }
+    }
+}
 
     // check players and add an 'X' or an 'O'
     flag = Math.floor(Math.random() * 2);
