@@ -21,28 +21,37 @@
 // let the computer make the next move
 
  // get user names
+
+// console.log(document);
+
 let nameStorage = [];
-function getNames(user1Name, user2Name) {
+function getNames() {
+    console.log(document);
     user1Name = document.getElementById('p1name').value;
     user2Name = document.getElementById('p2name').value;
     nameStorage[0] = user1Name;
-    nameStorage[1] = '';
+    nameStorage[1] = user2Name;
     document.getElementById("myPlayer1Name").innerHTML = user1Name;
     document.getElementById("myPlayer2Name").innerHTML = user2Name;
-    return user2Name;
+    // checkForPlayers(nameStorage);
+    let boardElem = document.getElementById('board');
+    boardElem.addEventListener("click", checkForPlayers(nameStorage));
 }
 
 
-function checkForPlayer2(user2Name) {
-    if (user2Name == null) {
+function checkForPlayers(nameStorage) {
+    console.log("Checking for players");
+    if (nameStorage[0] == '') {
+        document.getElementById("myPlayer1Name").innerHTML = "Computer";
+    }
+    if (nameStorage[1] == '') {
         document.getElementById("myPlayer2Name").innerHTML = "Computer";
     }
 }
 
-    function gameBoard() {
-        let boardElem = document.querySelector('#board');
-    
 
+
+    function gameBoard() {
         // add event listener
    
         const renderScore = () => {
@@ -54,7 +63,6 @@ function checkForPlayer2(user2Name) {
 
         getNames();
         
-
         // Setting DOM to all boxes displayed
         var b1, b1, b3, b4, b5, b6, b7, b8, b9;
         b1 = document.getElementById("b1").value;

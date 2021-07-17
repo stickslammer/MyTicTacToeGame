@@ -18,7 +18,7 @@
     </div>
 
     <br><br>
-    <div class="board">
+    <div class="board" id="board">
         <input type="text" id="b1" onclick="myfunc_3(); gameBoard();" readonly>
         
         <input type="text" id="b2" onclick="myfunc_4(); gameBoard();" readonly>
@@ -48,7 +48,7 @@
 <div>
         <label for="p1name">Player One name:</label><br>
         <input onfocus="this.value=''" id="p1name" placeholder="Enter name">
-        <button onclick="getNames(),checkForPlayer2()">Player One</button>
+        <button onclick="getNames()">Player One</button>
         <br><br>
         <label for="p2name">Player Two name:</label><br>
         <input onfocus="this.value=''" id="p2name" placeholder="Enter name">
