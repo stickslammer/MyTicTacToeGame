@@ -313,15 +313,10 @@ function checkForPlayers(nameStorage) {
 
 const computerMove = () => {
     console.log("Computer Move called");
-    let emptyCells = [];
-    //let myRandom = Math.ceil(Math.random() * emptyCells.length) - 1;
-    //boardElem.addEventListener("click", myfunc_3);
-    for (let i = 0; i < boardElem.length; i++) {
-        if (document.getElementById("b1").value= 'X') {
-            console.log("found an empty");
+        if (document.getElementById("b1"||"b2"||"b3"||"b4"||"b5"||"b6"||"b7"||"b8"||"b9").innerText == false) {
+            let emptyCells = [];
         }
     }
-}
 
     // check players and add an 'X' or an 'O'
     flag = Math.floor(Math.random() * 2);
