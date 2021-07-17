@@ -6,15 +6,20 @@
 }
 
 #myPlayer1Name {
-  display: table-row;
+  display: inline-flex;
   justify-content: left;
-  font-size: 16px;
+  font-size: 24px;
+  color: blueviolet;
+  margin:  30px;
+  
 }
 
 #myPlayer2Name {
-  display: table-row;
+  display: inline-flex;
   justify-content: right;
-  font-size: 16px;
+  font-size: 24px;
+  color: blueviolet;
+  margin-left: 700px;
 }
 
 .board {
