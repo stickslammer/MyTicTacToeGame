@@ -310,11 +310,19 @@ function checkForPlayers(nameStorage) {
         document.getElementById("myPlayer1Name").value = '';
         document.getElementById("myPlayer2Name").value = '';
     }
+let gameCells = [];
+gameCells = ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9"];
 
 const computerMove = () => {
     console.log("Computer Move called");
         if (document.getElementById("b1"||"b2"||"b3"||"b4"||"b5"||"b6"||"b7"||"b8"||"b9").innerText == false) {
+            document.getElementById("b1").value = '0';
             let emptyCells = [];
+            for (let i = 0; i < gameCells.length; i++) {
+                emptyCells.push(document.getElementById("b1" || "b2" || "b3" || "b4" || "b5" || "b6" || "b7" || "b8" || "b9").innerText == true);
+                let random = Math.ceil(Math.random() * emptyCells.length) - 1;
+                console.log(random);       
+            }
         }
     }
 
