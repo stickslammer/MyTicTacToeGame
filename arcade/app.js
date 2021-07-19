@@ -316,12 +316,34 @@ gameCells = ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9"];
 const computerMove = () => {
     console.log("Computer Move called");
         if (document.getElementById("b1"||"b2"||"b3"||"b4"||"b5"||"b6"||"b7"||"b8"||"b9").innerText == false) {
-            document.getElementById("b1").value = '0';
             let emptyCells = [];
+            let random = [];
+            let newMove = [];
+            let newMove2 = [];
             for (let i = 0; i < gameCells.length; i++) {
                 emptyCells.push(document.getElementById("b1" || "b2" || "b3" || "b4" || "b5" || "b6" || "b7" || "b8" || "b9").innerText == true);
-                let random = Math.ceil(Math.random() * emptyCells.length) - 1;
-                console.log(random);       
+                random = Math.ceil(Math.random() * emptyCells.length) - 1;
+                newMove = ("b") + random;
+                if (newMove == "b1") {
+                    myfunc_3();
+                } else if (newMove == "b2") {
+                    myfunc_4();
+                } else if (newMove == "b3") {
+                    myfunc_5();
+                } else if (newMove == "b4") {
+                    myfunc_6();
+                } else if (newMove == "b5") {
+                    myfunc_7();
+                } else if (newMove == "b6") {
+                    myfunc_8();
+                } else if (newMove == "b7") {
+                    myfunc_9();
+                } else if (newMove == "b8") {
+                    myfunc_10();
+                } else if (newMove == "b9") {
+                    myfunc_11();
+                }
+                //console.log(newMove);       
             }
         }
     }
