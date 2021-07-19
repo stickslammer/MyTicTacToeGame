@@ -1,32 +1,10 @@
 // TIC - TAC - TOE
-// As users playing a two player game we want to:
-
-// enter our names and have them displayed
-// have our order chosen for us by the game
-// take turns placing our marks in empty spaces
-// not be able to place our marks in an occupied space
-// be told when a move causes a player to win, or to draw
-// start the game over without having to reset the browser
-// As a user playing a one player game I want to:
-
-// see the name 'Computer' displayed as my opponent
-// have the Computer player make moves as if it were a human player with the correct mark in an empty space
-// As a user playing a single player game I would be delighted to:
-
-// have the Computer make 'better-than-guessing' choices when placing a mark on the board
-// set the board size myself("wider" or "taller" than 3x3)
-// initial setup
-// testing
-// Function called whenever user tab on any box
-// let the computer make the next move
-
- // get user names
 
 
 let boardElem = document.getElementById('board');
 let nameStorage = [];
+
 function getNames() {
-    console.log(document);
     user1Name = document.getElementById('p1name').value;
     user2Name = document.getElementById('p2name').value;
     nameStorage[0] = user1Name;
@@ -38,27 +16,19 @@ function getNames() {
 }
 
 function checkForPlayers(nameStorage) {
-    console.log("Checking for players");
     if (nameStorage[0] == '') {
         document.getElementById("myPlayer1Name").innerHTML = "Computer";
     }
     if (nameStorage[1] == '') {
         document.getElementById("myPlayer2Name").innerHTML = "Computer";
     }
-    computerMove();
+    //computerMove(); // This function doesn't work exactly as it should, but if you uncomment it does somewhat work.
 }
 
     function gameBoard() {
-        // add event listener
-        const renderScore = () => {
-            scoreElem.innerHTML = `
-    <div>${state.players[0]}: ${state.scores[0]}</div>
-    <div>${state.players[1]}: ${state.scores[1]}</div>
-  `;
-        }
 
-    getNames();
-        
+        getNames();
+
         // Setting DOM to all boxes displayed
         var b1, b1, b3, b4, b5, b6, b7, b8, b9;
         b1 = document.getElementById("b1").value;
@@ -284,7 +254,6 @@ function checkForPlayers(nameStorage) {
             window.alert('Game Tie');
         }
         else {
-
             // Print player's turn 
             if (flag == 1) {
                 document.getElementById('print').innerHTML = "Player X Turn";
@@ -310,40 +279,47 @@ function checkForPlayers(nameStorage) {
         document.getElementById("myPlayer1Name").value = '';
         document.getElementById("myPlayer2Name").value = '';
     }
+
 let gameCells = [];
 gameCells = ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9"];
 
+// this 'kinda' works but I wasn't able to suss out the individual play function
 const computerMove = () => {
-    console.log("Computer Move called");
         if (document.getElementById("b1"||"b2"||"b3"||"b4"||"b5"||"b6"||"b7"||"b8"||"b9").innerText == false) {
             let emptyCells = [];
             let random = [];
             let newMove = [];
-            let newMove2 = [];
             for (let i = 0; i < gameCells.length; i++) {
                 emptyCells.push(document.getElementById("b1" || "b2" || "b3" || "b4" || "b5" || "b6" || "b7" || "b8" || "b9").innerText == true);
                 random = Math.ceil(Math.random() * emptyCells.length) - 1;
                 newMove = ("b") + random;
                 if (newMove == "b1") {
                     myfunc_3();
-                } else if (newMove == "b2") {
-                    myfunc_4();
-                } else if (newMove == "b3") {
-                    myfunc_5();
-                } else if (newMove == "b4") {
-                    myfunc_6();
-                } else if (newMove == "b5") {
-                    myfunc_7();
-                } else if (newMove == "b6") {
-                    myfunc_8();
-                } else if (newMove == "b7") {
-                    myfunc_9();
-                } else if (newMove == "b8") {
-                    myfunc_10();
-                } else if (newMove == "b9") {
-                    myfunc_11();
                 }
-                //console.log(newMove);       
+                if (newMove == "b2") {
+                    myfunc_4();
+                }
+                if (newMove == "b3") {
+                    myfunc_5();
+                }
+                if (newMove == "b4") {
+                    myfunc_6();
+                }
+                if (newMove == "b5") {
+                    myfunc_7();
+                }
+                if (newMove == "b6") {
+                    myfunc_8();
+                }
+                if (newMove == "b7") {
+                    myfunc_9();
+                }
+                if (newMove == "b8") {
+                    myfunc_10();
+                }
+                if (newMove == "b9") {
+                    myfunc_11();
+                }    
             }
         }
     }
